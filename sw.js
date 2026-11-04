@@ -1,9 +1,9 @@
 const SCOPE_PATH = new URL('./', self.location.href).pathname;
 const CACHE_PREFIX = `lumi-vocab:${SCOPE_PATH}:`;
-const CACHE = `${CACHE_PREFIX}v1.2.1`;
+const CACHE = `${CACHE_PREFIX}v1.3`;
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png',
-  './features.css?v=1.2', './learning.js?v=1.2', './pronunciation.js?v=1.2', './haptics.js?v=1.2', './offline.js?v=1.2',
-  './audio-library.js?v=1.2', './audio-manifest.json', './audio/attribution.json', './THIRD-PARTY-NOTICES.txt'];
+  './vocabulary-advanced.js?v=1.3', './features.css?v=1.3', './learning.js?v=1.3', './pronunciation.js?v=1.3', './haptics.js?v=1.3', './offline.js?v=1.3',
+  './audio-library.js?v=1.3', './audio-manifest.json', './audio/attribution.json', './THIRD-PARTY-NOTICES.txt'];
 let offlineStatus = { type: 'lumi-offline', done: 0, total: ASSETS.length };
 
 async function announce() {
@@ -30,7 +30,7 @@ async function precache() {
       offlineStatus.done = ASSETS.length + Math.min(files.length, index + 8);
       await announce();
     }
-    await cache.put(new URL('./__offline-ready', self.location.href), new Response('v1.2'));
+    await cache.put(new URL('./__offline-ready', self.location.href), new Response('v1.3'));
     offlineStatus.ready = true;
     await announce();
     await self.skipWaiting();

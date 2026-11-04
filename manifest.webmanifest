@@ -1,7 +1,7 @@
 {
   "name": "lumi叫你背单词",
   "short_name": "lumi背单词",
-  "description": "本地离线英语背词，B1-C1 分级词库与间隔复习",
+  "description": "离线英语背词，B1–C2 参考分级词库，认词、例句回忆与拼写训练",
   "id": "./",
   "start_url": "./",
   "scope": "./",
